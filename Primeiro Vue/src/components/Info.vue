@@ -10,18 +10,26 @@
             <li>MYSQL</li>
         </ul>
         <p v-show="mostrar_email">Mande uma mensagem para: {{ email }}</p>
+        <p>Para acessar meu portifílio, <a v-bind:href="meu_link" taget="_blank">clique aqui</a></p>
+        <Picture />
+
     </div>
 </template>
 
 <script>
+import Picture from "./Picture.vue";
 export default {
     name:'Info',
     data() {
         return {
             esta_trabalhando : false,
             mostrar_email: false,
-            email: 'victor.luck'
+            email: 'victor.luck',
+            meu_link : 'https://google.com'
         }
+    },
+    components: {
+        Picture
     }
 }
 </script>
